@@ -39,7 +39,8 @@
             
             if($prime==true)
             {
-                print($y . "<br/>");
+                print($y . "<br/>"); //break separated
+                //print($y . ", "); //comma separated
                 $count=$count+1;
             } else
             {
