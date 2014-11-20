@@ -14,10 +14,10 @@
             
             if($y==2)
             {
-                $prime=1;
+                $prime=true;
             } elseif($y==1)
             {
-                $prime=0;
+                $prime=false;
             } else
             {
                 $check=ceil(sqrt($y));
@@ -31,7 +31,7 @@
                 
                     if($remNum==0)
                     {
-                        $prime=0;
+                        $prime=false;
                         break;
                     }
                 }
