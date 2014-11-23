@@ -33,7 +33,7 @@
             exit("The starting number must be less than the ending number");
         }
         
-        print("The prime numbers in your range are: <br/>");
+        print("The prime numbers in the range " . $minNum . " to " . $maxNum . " are: <br/>");
         fwrite($fp, "The prime numbers in the range " . $minNum . " to " . $maxNum . " are:\n\n");
         
         for($y=$minNum; $y<=$maxNum; $y++)
