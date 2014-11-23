@@ -8,7 +8,7 @@
         $minNum=$_REQUEST['min_number'];
         $maxNum=$_REQUEST['max_number'];
         
-        $fileName = "primes.txt";
+        $fileName = "previous_primes.txt";
         $fp=fopen($fileName, 'w');
         
         $count=0;
@@ -52,9 +52,6 @@
                 for($x=2; $x<=$check; $x++)
                 {
                     $remNum=$y%$x; //modulus, 0 = no remainder
-                
-                    //print("remainder when dividing by " . $x . ": " . $remNum . "<br/>");
-                
                     if($remNum==0)
                     {
                         $prime=false;
@@ -72,8 +69,8 @@
         }
         
         print("There are " . $count . " prime numbers in the range: " . $minNum . " to " . $maxNum . "<br/>");
-        print("Results saved --> primes.txt");
-        fwrite($fp, "\n There are " . $count . " prime numbers in the range: " . $minNum . " to " . $maxNum);
+        print("Results saved --> previous_primes.txt");
+        fwrite($fp, "\nThere are " . $count . " prime numbers in the range: " . $minNum . " to " . $maxNum);
         fclose($fp);
     ?>
 </body>
