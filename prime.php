@@ -3,7 +3,7 @@
     <title>Prime</title>
 </head>
 <body>
-    <a href="/prime.html">Go Back</a><br/<br/>
+    <a href="/prime.html">Go Back</a><br/><br/>
     <?php
         $minNum=$_REQUEST['min_number'];
         $maxNum=$_REQUEST['max_number'];
