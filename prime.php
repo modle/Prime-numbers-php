@@ -3,7 +3,7 @@
     <title>Prime</title>
 </head>
 <body>
-    <a href="/prime.html">Go Back</a><br/>
+    <a href="/prime.html">Go Back</a><br/<br/>
     <?php
         $minNum=$_REQUEST['min_number'];
         $maxNum=$_REQUEST['max_number'];
@@ -34,6 +34,7 @@
         }
         
         print("The prime numbers in your range are: <br/>");
+        fwrite($fp, "The prime numbers in the range " . $minNum . " to " . $maxNum . " are:\n\n");
         
         for($y=$minNum; $y<=$maxNum; $y++)
         {
@@ -62,15 +63,15 @@
             
             if($prime==true)
             {
-                print($y . "<br/>"); //break separated
+                print($y . ", "); //comma separated
                 $count=$count+1;
                 fwrite($fp, $y . ", ");
             } 
         }
         
-        print("There are " . $count . " prime numbers in the range: " . $minNum . " to " . $maxNum . "<br/>");
-        print("Results saved --> previous_primes.txt");
-        fwrite($fp, "\nThere are " . $count . " prime numbers in the range: " . $minNum . " to " . $maxNum);
+        print("<br/><br/>There are " . $count . " prime numbers.<br/>");
+        print("<br/>Results saved.");
+        fwrite($fp, "\n\nThere are " . $count . " prime numbers.");
         fclose($fp);
     ?>
 </body>
