@@ -42,7 +42,7 @@
             if($y==2)
             {
                 $prime=true;
-            } elseif($y==1)
+            } elseif($y==1 || $y%2==0)
             {
                 $prime=false;
             } else
@@ -50,7 +50,7 @@
                 $check=ceil(sqrt($y));
                 $prime=true; 
                 
-                for($x=2; $x<=$check; $x++)
+                for($x=3; $x<=$check; $x+=2)
                 {
                     $remNum=$y%$x; //modulus, 0 = no remainder
                     if($remNum==0)
